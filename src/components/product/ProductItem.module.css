@@ -1,0 +1,12 @@
+@import url(../../index.css);
+
+
+.ProductItem {
+    max-width: 256pt;
+    width: 100%;
+}
+
+.ProductPreviewPicture {
+    border-radius: var(--primary-border-radius);
+    width: 100%;
+}

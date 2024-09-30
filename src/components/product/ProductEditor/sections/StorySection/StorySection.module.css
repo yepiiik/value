@@ -1,0 +1,14 @@
+.StorySection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 24pt;
+    position: relative;
+}
+
+.StorySection::after {
+    content: 'StorySection';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

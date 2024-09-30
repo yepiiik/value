@@ -1,28 +1,19 @@
-import React, { useState } from "react";
-import ProductItem from "./components/product/ProductItem";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import ProductEditor from "./components/product/ProductEditor/ProductEditor";
+import FeedView from "./views/FeedView"
+import ProductView from "./views/ProductView";
 
 function App() {
-  const [productList, setProductList] = useState([
-    {
-      productName: 'Hoodie',
-      productDescription: 'Made in journey to remember the beauty of the life',
-      productPreviewURL: 'https://images.unsplash.com/photo-1583949493638-a9f5811a8837?q=80&w=1949&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      price: 100,
-      currancy: 'USD'
-    },
-  ]);
-
   return (
-    <div className="app">
-      <h1>Unique products as you are</h1>
-
-      <section className="product__section">
-        {productList.map((productItem) => (
-          <ProductItem {...productItem} />
-        ))}
-      </section>
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<FeedView />} />
+        <Route path="/editor" element={<ProductEditor />} />
+        <Route path="/product/:productId" element={<ProductView />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

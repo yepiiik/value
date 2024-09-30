@@ -1,4 +1,4 @@
-@import url(../../index.css);
+@import url(../../../index.css);
 
 
 .ProductItem {
@@ -9,4 +9,8 @@
 .ProductPreviewPicture {
     border-radius: var(--primary-border-radius);
     width: 100%;
+}
+
+.ProductViewCount {
+    opacity: 0.5;
 }
